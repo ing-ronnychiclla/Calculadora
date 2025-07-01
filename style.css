@@ -1,0 +1,154 @@
+  /* Reset y configuración básica */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Contenedor principal de la calculadora */
+        .calculator {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 450px;
+            width: 100%;
+        }
+
+        /* Título de la calculadora */
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 25px;
+            font-size: 28px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Pantalla de la calculadora */
+        .display {
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ff88;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            text-align: right;
+            font-size: 24px;
+            font-family: 'Courier New', monospace;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            word-break: break-all;
+            border: 2px solid rgba(0, 255, 136, 0.3);
+        }
+
+        /* Grid de botones */
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        /* Estilos base para todos los botones */
+        button {
+            padding: 18px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Efectos hover para todos los botones */
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Botones de operadores principales */
+        .operator {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+        }
+
+        .operator:hover {
+            background: linear-gradient(135deg, #ee5a24, #ff6b6b);
+        }
+
+        /* Botones de funciones científicas */
+        .scientific {
+            background: linear-gradient(135deg, #4834d4, #686de0);
+            color: white;
+            font-size: 14px;
+        }
+
+        .scientific:hover {
+            background: linear-gradient(135deg, #686de0, #4834d4);
+        }
+
+        /* Botón de igual */
+        .equals {
+            background: linear-gradient(135deg, #00d2d3, #54a0ff);
+            color: white;
+            grid-column: span 2;
+        }
+
+        .equals:hover {
+            background: linear-gradient(135deg, #54a0ff, #00d2d3);
+        }
+
+        /* Botón de limpiar */
+        .clear {
+            background: linear-gradient(135deg, #ff9ff3, #f368e0);
+            color: white;
+        }
+
+        .clear:hover {
+            background: linear-gradient(135deg, #f368e0, #ff9ff3);
+        }
+
+        /* Botón cero que ocupa dos columnas */
+        .zero {
+            grid-column: span 2;
+        }
+
+        /* Responsive design para pantallas pequeñas */
+        @media (max-width: 480px) {
+            .calculator {
+                padding: 20px;
+            }
+            
+            button {
+                padding: 15px;
+                font-size: 14px;
+            }
+            
+            .display {
+                font-size: 20px;
+                padding: 15px;
+            }
+            
+            .scientific {
+                font-size: 12px;
+            }
+        }
